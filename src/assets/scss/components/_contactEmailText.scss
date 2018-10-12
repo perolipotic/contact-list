@@ -1,0 +1,22 @@
+.contact-email{
+  display: flex;
+  align-items: center;
+  position: relative;
+  &__left{
+    display: flex;
+    align-items: center;
+    flex-basis: 100px;
+  }
+  &__right{
+    color:$lightGray;
+    position: relative;
+    top:-1px
+  }
+  &--green{
+    margin-left: 10px;
+    color:$green;
+    font-weight: 700;
+    position: relative;
+    top:-1px
+  }
+}

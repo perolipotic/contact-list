@@ -4,7 +4,8 @@ import Icon from '../Icon'
 
 class CardHeader extends React.Component {
   state = {
-    isFavourite: this.props.isFavourite
+    isFavourite: this.props.isFavourite,
+    id: this.props.id
   }
   toggleState = () => {
     this.setState({ isFavourite: !this.state.isFavourite })
@@ -28,8 +29,6 @@ class CardHeader extends React.Component {
           <i className='contact-card__icon'>
             <Icon icon='trash' sizeBox='15px'></Icon>
           </i>
-
-
         </div>
       </div>
     )

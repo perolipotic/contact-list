@@ -5,6 +5,9 @@ import edit from '../assets/images/icons/edit.svg';
 import notFavourite from '../assets/images/icons/notFavourite.svg';
 import favourite from '../assets/images/icons/favourite.svg';
 import plus from '../assets/images/icons/plus.svg';
+import back from '../assets/images/icons/back.svg';
+import email from '../assets/images/icons/email.svg';
+import phone from '../assets/images/icons/phone.svg';
 
 const icons = {
   search,
@@ -13,6 +16,9 @@ const icons = {
   notFavourite,
   favourite,
   plus,
+  back,
+  email,
+  phone
 }
 
 const Icon = ({ icon, sizeBox, onClick }) => {
