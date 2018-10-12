@@ -1,0 +1,40 @@
+.tabs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  @media screen and (max-width:660px){
+    margin: 20px 0;
+  }
+  &__item{
+    color:#bec7c6;
+    text-decoration: none;
+    font-weight: 700;
+    font-size:1.125em;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-left: 25px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      right:-25px;
+      top:2px;
+      height: 18px;
+      width: 2px;
+      background: #bec7c6;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    &:last-child:after{
+      position: static;
+    }
+    &:first-child{
+      margin-left: 0;
+    }
+    &--active{
+      color:#2ea1ad;
+    }
+  }
+}

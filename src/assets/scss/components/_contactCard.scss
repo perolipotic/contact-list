@@ -1,0 +1,123 @@
+.contact-card{
+  &--list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: calc((100%) - 30px );
+    padding: 15px;
+    border:1px solid #bbc4c3;
+    transition: border 0.2s ease-in-out;
+    border-radius: 3px;
+    margin:0 15px 30px 15px;
+
+    @media screen and (max-width:660px){
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin:0 0 15px 0;
+      height: 60px;
+    }
+
+    @media screen and (min-width:660px){
+      width: calc((100% / 2) - 30px );
+    }
+    
+    @media screen and (min-width:960px){
+      width: calc((100% / 3) - 30px );
+    }
+
+    @media screen and (min-width:1280px){
+      width: calc((100% / 4) - 30px );
+    }
+
+    &--new{
+      border: 1px dashed #99d1d7
+    }
+  }
+  &__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (max-width:660px){
+      flex-direction: row;
+    }
+  }
+  &__item:hover{
+    border:1px solid #2ea1ad;
+    transition: border 0.2s ease-in-out;
+  }
+  &__item:hover > &__header > &--show-on-hover{
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out
+  }
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @media screen and (max-width:660px){
+      width: auto;
+      order:2;
+    }
+  }
+  &__icon{
+    cursor: pointer;
+
+    @media screen and (max-width:660px){
+      margin-right: 10px
+    }
+  }
+  &--show-on-hover{
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    @media screen and (max-width:660px){
+      opacity: 1;
+    }
+  }
+  &--show-on-hover &__icon:first-child{
+    margin-right: 20px;
+    @media screen and (max-width:660px){
+      margin-right: 10px
+    }
+  }
+ &__icon:last-child{
+
+    @media screen and (max-width:660px){
+      margin-right: 0px
+    }
+  }
+  &__image{
+    position: relative;
+    z-index: 2;
+    border-radius: 100%;
+    border:3px solid #bbc4c3;
+
+    @media screen and (max-width:660px){
+      width: 45px;
+      margin-right: 15px
+    }
+  }
+  &__title{
+    color:#bbc4c3;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 5px 0;
+    @media screen and (max-width:660px){
+      font-size: 1em;
+    }
+  }
+  &--new-title{
+    color:#99d1d7;
+    margin-top:20px;
+    @media screen and (max-width:660px){
+      margin:0 
+    }
+  }
+}

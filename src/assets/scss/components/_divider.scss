@@ -1,0 +1,14 @@
+.divider{
+  height: 2px;
+  width: calc(100% - 16px);
+  margin: 0 auto;
+  @media screen and (max-width:660px){
+    width: 80%;
+  }
+  &--gray{
+    background: #bec7c6;
+  }
+  &--green{
+    background: #2ea1ad;
+  }
+}
