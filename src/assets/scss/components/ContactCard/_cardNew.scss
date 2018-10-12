@@ -1,0 +1,12 @@
+.contact-card{
+  &--new{
+    border: 1px dashed $lightGreen
+  }
+  &--new-title{
+    color:$lightGreen;
+    margin-top:20px;
+    @media screen and (max-width:660px){
+      margin:0 
+    }
+  }
+}

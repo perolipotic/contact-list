@@ -1,0 +1,55 @@
+.contact-card{
+  &--list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (max-width:660px){
+      flex-direction: row;
+    }
+  }
+  &__item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: calc((100%) - 30px );
+    padding: 15px;
+    border:1px solid $lightGray;
+    transition: border 0.2s ease-in-out;
+    border-radius: 3px;
+    margin:0 15px 30px 15px;
+
+    @media screen and (max-width:660px){
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin:0 0 15px 0;
+      height: 60px;
+    }
+
+    @media screen and (min-width:660px){
+      width: calc((100% / 2) - 30px );
+    }
+    
+    @media screen and (min-width:960px){
+      width: calc((100% / 3) - 30px );
+    }
+
+    @media screen and (min-width:1280px){
+      width: calc((100% / 4) - 30px );
+    }
+  }
+  &__item:hover{
+    border:1px solid $green;
+    transition: border 0.2s ease-in-out;
+  }
+  &__item:hover > &__header > &--show-on-hover{
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out
+  }
+}

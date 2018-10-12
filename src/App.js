@@ -6,7 +6,7 @@ import persons from './persons'
 
 
 import HomePage from './container/HomePage';
-import EditContact from './container/EditContact';
+import Person from './container/Person';
 
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
           <Router>
             <Switch>
               <Route exact path="/" component={() => <HomePage persons={persons} />} />
-              <Route exact path="/edit/:id" component={EditContact} />
+              <Route exact path="/person/:id" component={Person} />
             </Switch>
           </Router>
         </div>

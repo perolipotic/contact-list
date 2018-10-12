@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Icon from './Icon';
-import Divider from './Divider'
+import Icon from '../Icon';
+import Divider from '../Divider'
 
 const ContactHeader = () => {
   return (

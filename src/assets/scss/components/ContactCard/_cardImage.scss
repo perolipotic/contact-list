@@ -1,0 +1,17 @@
+.contact-card{
+  &__image{
+    width: 66px;
+    height: 66px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    border-radius: 100%;
+    border:3px solid $lightGray;
+
+    @media screen and (max-width:660px){
+      width: 45px;
+      margin-right: 15px
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.contact-card{
+  &__title{
+    color:$lightGray;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 5px 0;
+    @media screen and (max-width:660px){
+      font-size: 1em;
+    }
+  }
+}

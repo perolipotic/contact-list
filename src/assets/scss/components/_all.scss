@@ -1,9 +1,7 @@
 @import './header';
 @import './divider';
 @import './tabs';
-@import './contactCard';
 @import './searchBar';
-@import './contactImage';
-@import './contactHeader';
-@import './contactEmailText';
-@import './contactNumberText';
+@import'./ContactCard/all';
+@import'./ContactInfo/all';
+
