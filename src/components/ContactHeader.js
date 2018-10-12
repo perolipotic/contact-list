@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Icon from './Icon';
-import ContactEmailText from '../components/ContactEmailText';
-import ContactNumberText from '../components/ContactNumberText';
 import Divider from './Divider'
 
 const ContactHeader = () => {
@@ -27,10 +25,6 @@ const ContactHeader = () => {
         </div>
       </div>
       <Divider green></Divider>
-      <div className="contact-info__body">
-        <ContactEmailText />
-        <ContactNumberText />
-      </div>
     </div>
   )
 }
