@@ -21,11 +21,11 @@ class CardHeader extends React.Component {
             sizeBox='15px'></Icon>
         </i>
         <div className='contact-card--show-on-hover'>
-          <Link to={`/edit/${id}`}>
-            <i className='contact-card__icon'>
+          <i className='contact-card__icon'>
+            <Link to={`/edit/${id}`}>
               <Icon icon='edit' sizeBox='15px'></Icon>
-            </i>
-          </Link>
+            </Link>
+          </i>
           <i className='contact-card__icon'>
             <Icon icon='trash' sizeBox='15px'></Icon>
           </i>
