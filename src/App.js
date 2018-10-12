@@ -1,34 +1,26 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.scss';
 import Header from './components/Header'
-import Tabs from './components/Tabs';
-import Divider from './components/Divider'
-import SearchBar from './components/SearchBar';
-import ContactCard from './components/ContactCard/ContactCard';
-import CardNew from './components/ContactCard/CardNew';
+import persons from './persons'
 
+
+import HomePage from './container/HomePage';
+import Edit from './container/Edit';
 
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className='test'>
-          <Header />
-          <Tabs />
-          <Divider green />
-          <SearchBar />
-          <div className='container'>
-            <div className='contact-card--list'>
-              <CardNew />
-              <ContactCard />
-              <ContactCard />
-              <ContactCard />
-              <ContactCard />
-              <ContactCard />
-              <ContactCard />
-            </div>
-          </div>
+        <Header />
+        <div className='container'>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={() => <HomePage persons={persons} />} />
+              <Route exact path="/edit" component={Edit} />
+            </Switch>
+          </Router>
         </div>
       </React.Fragment>
     );

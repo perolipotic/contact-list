@@ -10,7 +10,7 @@
     align-items: center;
     width: calc((100%) - 30px );
     padding: 15px;
-    border:1px solid #bbc4c3;
+    border:1px solid $lightGray;
     transition: border 0.2s ease-in-out;
     border-radius: 3px;
     margin:0 15px 30px 15px;
@@ -36,7 +36,7 @@
     }
 
     &--new{
-      border: 1px dashed #99d1d7
+      border: 1px dashed $lightGreen
     }
   }
   &__body{
@@ -49,7 +49,7 @@
     }
   }
   &__item:hover{
-    border:1px solid #2ea1ad;
+    border:1px solid $green;
     transition: border 0.2s ease-in-out;
   }
   &__item:hover > &__header > &--show-on-hover{
@@ -94,10 +94,14 @@
     }
   }
   &__image{
+    width: 66px;
+    height: 66px;
+    background-size: cover;
+    background-position: center;
     position: relative;
     z-index: 2;
     border-radius: 100%;
-    border:3px solid #bbc4c3;
+    border:3px solid $lightGray;
 
     @media screen and (max-width:660px){
       width: 45px;
@@ -105,7 +109,7 @@
     }
   }
   &__title{
-    color:#bbc4c3;
+    color:$lightGray;
     font-size: 1.25em;
     font-weight: bold;
     margin: 5px 0;
@@ -114,7 +118,7 @@
     }
   }
   &--new-title{
-    color:#99d1d7;
+    color:$lightGreen;
     margin-top:20px;
     @media screen and (max-width:660px){
       margin:0 

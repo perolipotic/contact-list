@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Mijo",
+    "lastName": "Caktaš",
+    "imageUrl": "https://hajduk.hr/sadrzaj/igraci/profil/2014_18-caktas.jpg",
+    "isFavourite": false
+  },
+  {
+    "id": 2,
+    "name": "Milan",
+    "lastName": "Sjerković",
+    "imageUrl": "http://mojzagreb.info/images/uploads/vijesti/5414/1milansijerkovic.jpg",
+    "isFavourite": false
+  },
+  {
+    "id": 3,
+    "name": "Yvonne",
+    "lastName": "Strahovski",
+    "imageUrl": "https://i.pinimg.com/originals/d6/41/0d/d6410d6208f436ebe541217ad3e82dfe.jpg",
+    "isFavourite": true
+  },
+  {
+    "id": 4,
+    "name": "Petar",
+    "lastName": "Grašo",
+    "imageUrl": "http://radiokameleon.ba/wp-content/uploads/2016/10/petar-graso.jpg",
+    "isFavourite": false
+  },
+  {
+    "id": 5,
+    "name": "Ivana",
+    "lastName": "Mišerić",
+    "imageUrl": "https://www.scena.hr/wp-content/uploads/2014/06/Ivana-Miseric-1.jpg",
+    "isFavourite": true
+  },
+  {
+    "id": 6,
+    "name": "Lionel",
+    "lastName": "Messi",
+    "imageUrl": "https://olorisupergal.com/wp-content/uploads/2016/07/lionel-messi.jpg",
+    "isFavourite": false
+  },
+  {
+    "id": 7,
+    "name": "Rene",
+    "lastName": "Bitorajac",
+    "imageUrl": "https://image.dnevnik.hr/media/images/996x562/May2016/61225290-rene-bitorajac.jpg",
+    "isFavourite": false
+  }
+]

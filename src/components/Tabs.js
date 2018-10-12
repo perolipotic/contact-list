@@ -14,6 +14,7 @@ class Tabs extends Component {
     }
     else return ''
   }
+
   setTab = (value) => {
     this.setState({ value })
   }
@@ -24,6 +25,7 @@ class Tabs extends Component {
           (<p
             onClick={() => this.setTab(tab.value)}
             className={`tabs__item ${this.isActive(tab.value)}`}
+            active={this.state.value}
             key={index}>
             {tab.label}
           </p>)

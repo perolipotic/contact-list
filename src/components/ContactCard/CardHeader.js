@@ -1,21 +1,38 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Icon from '../Icon'
 
-const CardHeader = () => {
-  return (
-    <div className='contact-card__header'>
-      <i className='contact-card__icon'>
-        <Icon icon='favourite' sizeBox='15px'></Icon>
-      </i>
-      <div className='contact-card--show-on-hover'>
+class CardHeader extends React.Component {
+  state = {
+    isFavourite: this.props.isFavourite
+  }
+  toggleState = () => {
+    this.setState({ isFavourite: !this.state.isFavourite })
+  };
+  render() {
+    const { id, isFavourite } = this.state
+    return (
+      <div className='contact-card__header'>
         <i className='contact-card__icon'>
-          <Icon icon='edit' sizeBox='15px'></Icon>
+          <Icon
+            onClick={this.toggleState}
+            icon={isFavourite ? 'favourite' : 'notFavourite'}
+            sizeBox='15px'></Icon>
         </i>
-        <i className='contact-card__icon'>
-          <Icon icon='trash' sizeBox='15px'></Icon>
-        </i>
+        <div className='contact-card--show-on-hover'>
+          <Link to={`/edit/${id}`}>
+            <i className='contact-card__icon'>
+              <Icon icon='edit' sizeBox='15px'></Icon>
+            </i>
+          </Link>
+          <i className='contact-card__icon'>
+            <Icon icon='trash' sizeBox='15px'></Icon>
+          </i>
+
+
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 export default CardHeader

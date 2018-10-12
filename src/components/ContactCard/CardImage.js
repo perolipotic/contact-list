@@ -1,11 +1,9 @@
 import React from 'react'
-import person from '../../assets/images/persons/person1.png'
 
-const CardImage = () => {
+const CardImage = ({ imageUrl }) => {
   return (
-    <img className="contact-card__image"
-      src={person}
-      alt="a" />
+    <div className="contact-card__image"
+      style={{ backgroundImage: `url(${imageUrl})` }} />
   )
 }
 

@@ -15,9 +15,10 @@ const icons = {
   plus,
 }
 
-const Icon = ({ icon, sizeBox }) => {
+const Icon = ({ icon, sizeBox, onClick }) => {
   return (
     <img
+      onClick={onClick}
       style={{ width: sizeBox, height: sizeBox }}
       src={icons[icon]}
       alt={`icon-${icon}`} />

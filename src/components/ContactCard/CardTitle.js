@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CardTitle = () => {
+const CardTitle = ({ name, lastName }) => {
   return (
     <p className='contact-card__title'>
-      Oscar Arnold
+      {name} {lastName}
     </p>
   )
 }
