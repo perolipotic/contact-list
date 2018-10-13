@@ -2,10 +2,18 @@
   display: flex;
   align-items: center;
   position: relative;
+  @media screen and (max-width:660px){
+    align-items: flex-start;
+    flex-direction: column;
+  }
   &__left{
     display: flex;
     align-items: center;
     flex-basis: 100px;
+    @media screen and (max-width:660px){
+      flex-basis: auto;
+      margin-bottom: 15px;
+    }
   }
   &__right{
     color:$lightGray;

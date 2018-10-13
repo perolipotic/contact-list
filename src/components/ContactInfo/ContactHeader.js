@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Icon from '../Icon';
-import Divider from '../Divider'
 
 const ContactHeader = () => {
   return (
@@ -24,7 +23,6 @@ const ContactHeader = () => {
           </i>
         </div>
       </div>
-      <Divider green></Divider>
     </div>
   )
 }

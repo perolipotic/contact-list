@@ -1,16 +1,28 @@
 .contact-number{
   display: flex;
   position: relative;
-  top:80px; 
+  margin-top: 80px;
+  @media screen and (max-width:660px){
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+  }
   &__left{
     display: flex;
     flex-basis: 100px;
+    @media screen and (max-width:660px){
+      flex-basis: auto;
+      margin-bottom: 15px;
+    }
   }
   &__right{
     color:$lightGray;
     position: relative;
     top:-1px;
-    width: calc(100% - 100px)
+    width: calc(100% - 100px);
+    @media screen and (max-width:660px){
+     width: 100%;
+    }
   }
   &__text{
     color:$lightGray;

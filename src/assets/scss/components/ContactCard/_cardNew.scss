@@ -1,6 +1,8 @@
 .contact-card{
-  &--new{
-    border: 1px dashed $lightGreen
+  &__item{
+    &--new{
+      border: 1px dashed $lightGreen
+    }
   }
   &--new-title{
     color:$lightGreen;
