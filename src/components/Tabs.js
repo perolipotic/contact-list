@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Tabs extends Component {
   state = {
-    value: 'all'
+    value: this.props.fav ? 'fav' : 'all'
   }
   tabs = [
     { label: 'All contacts', value: 'all' },
@@ -22,13 +23,13 @@ class Tabs extends Component {
     return (
       <div className="tabs">
         {this.tabs.map((tab, index) =>
-          (<p
+          (<Link
+            to={`${tab.value === 'all' ? '/' : 'fav'}`}
             onClick={() => this.setTab(tab.value)}
             className={`tabs__item ${this.isActive(tab.value)}`}
-            active={this.state.value}
             key={index}>
             {tab.label}
-          </p>)
+          </Link>)
         )}
       </div>
     )
