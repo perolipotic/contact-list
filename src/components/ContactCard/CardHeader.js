@@ -20,7 +20,7 @@ export default ({ id, isFavourite }) => (
     </i>
     <div className='contact-card--show-on-hover'>
       <i className='contact-card__icon'>
-        <Link to={`/person/edit/${id}`}>
+        <Link to={`/contact/edit/${id}`}>
           <Icon icon='edit' sizeBox='15px'></Icon>
         </Link>
       </i>

@@ -6,7 +6,7 @@ const ContactHeader = () => {
   return (
     <div className="contact-info__header__wrapper">
       <div className="contact-info__header">
-        <div className="contact-info--left">
+        <div className="contact-info--label">
           <i className="contact-info__icon">
             <Link to={"/"}>
               <Icon icon="back" sizeBox="20px" />
@@ -14,7 +14,7 @@ const ContactHeader = () => {
           </i>
           <p className="contact-info__title">Addie Hernandez</p>
         </div>
-        <div className="contact-info--right">
+        <div className="contact-info--icons">
           <i className="contact-info__icon">
             <Icon icon='favourite' sizeBox='15px'></Icon>
           </i>

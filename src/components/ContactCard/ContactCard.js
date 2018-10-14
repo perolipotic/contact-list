@@ -9,7 +9,7 @@ const ContactCard = ({ person: { imageUrl, name, lastName, id, isFavourite } }) 
     <div
       className='contact-card__item'>
       <CardHeader id={id} isFavourite={isFavourite} />
-      <Link style={{ width: '100%' }} to={`person/${id}`}>
+      <Link style={{ width: '100%' }} to={`contact/${id}`}>
         <div className='contact-card__body'>
           <CardImage imageUrl={imageUrl} />
           <CardTitle name={name} lastName={lastName} />

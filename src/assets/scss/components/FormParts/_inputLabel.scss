@@ -1,0 +1,13 @@
+.input-label{
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  &__text{
+    display: inline-block;
+    color:$green;
+    font-weight: 700;
+    margin-left: 10px;
+    position: relative;
+    top:-1px;
+  }
+}

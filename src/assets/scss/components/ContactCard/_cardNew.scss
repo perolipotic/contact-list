@@ -1,5 +1,9 @@
 .contact-card{
   &__item{
+    min-height: 152px;
+    @media screen and (max-width:660px){
+     min-height: auto; 
+    }
     &--new{
       border: 1px dashed $lightGreen
     }

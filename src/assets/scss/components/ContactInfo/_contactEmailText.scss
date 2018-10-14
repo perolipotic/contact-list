@@ -6,7 +6,7 @@
     align-items: flex-start;
     flex-direction: column;
   }
-  &__left{
+  &__icon{
     display: flex;
     align-items: center;
     flex-basis: 100px;
@@ -15,7 +15,7 @@
       margin-bottom: 15px;
     }
   }
-  &__right{
+  &__label{
     color:$lightGray;
     position: relative;
     top:-1px

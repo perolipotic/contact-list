@@ -12,10 +12,75 @@
   margin:0 auto;
   @media screen   and (max-width:660px){
     padding:0 15px;
+    overflow: hidden;
   }
 }
 a{
   text-decoration: none;
+}
+
+.contact__layout{
+  @media screen   and (max-width:660px){
+    margin: 20px 0 0 0!important;
+  }
+}
+.border-none{
+  border-bottom:none!important;
+}
+
+.btn{
+  width: 160px;
+  color:$white;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 600;
+  font-size: 0.875em;
+  border-radius:30px; 
+  cursor: pointer;
+  &--success{
+    background-color:$green;
+  }
+  &--cancel{
+    background-color:$lightGray;
+  }
+  &--wrapper{
+    margin-top:80px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+   
+  }
+}
+
+
+.extended-line{
+  &--green:after{
+  content:"";
+  position: absolute;
+  background-color: $green;
+  height:1px;
+  width:150px;
+  bottom: 0;
+  right:0;
+  }
+  @media screen and (max-width:660px){  
+    &--green::after{
+      height:0px;
+      width:0px;
+     }
+  }
+}
+
+.form-line-position:after{
+    bottom:auto;
+    top: -31px;
+    right: -70px;
+    height:1px;
+    width:150px;
+    @media screen and (min-width:660px) {
+      height:0px;
+      width:0px;
+    }
 }
 
 
