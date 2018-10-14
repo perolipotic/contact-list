@@ -4,7 +4,7 @@ import ContactHeader from '../components/ContactInfo/ContactHeader';
 import ContactEmailText from '../components/ContactInfo/ContactEmailText'
 import ContactNumberText from '../components/ContactInfo/ContactNumberText';
 
-const Person = () => {
+const Person = ({ edit }) => {
   return (
     <div className='contact-info'>
       <div className="contact-info__wrapper">
@@ -12,8 +12,8 @@ const Person = () => {
         <ContactHeader />
       </div>
       <div className="contact-info__body">
-        <ContactEmailText />
-        <ContactNumberText />
+        {!edit && <ContactEmailText />}
+        {!edit && <ContactNumberText />}
       </div>
     </div>
   )

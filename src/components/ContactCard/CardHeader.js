@@ -1,37 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Subscribe } from 'unstated'
 import Icon from '../Icon'
+import ContactsContainer from '../../unstated/ContactsContainer';
 
-class CardHeader extends React.Component {
-  state = {
-    isFavourite: this.props.isFavourite,
-    id: this.props.id
-  }
-  toggleState = () => {
-    this.setState({ isFavourite: !this.state.isFavourite })
-  };
-  render() {
-    const { id, isFavourite } = this.state
-    return (
-      <div className='contact-card__header'>
-        <i className='contact-card__icon'>
+export default ({ id, isFavourite }) => (
+  <div className='contact-card__header'>
+    <i className='contact-card__icon'>
+      <Subscribe to={[ContactsContainer]}>
+        {({ toggleFavourite }) => (
           <Icon
-            onClick={this.toggleState}
+            onClick={() => toggleFavourite(id)}
             icon={isFavourite ? 'favourite' : 'notFavourite'}
-            sizeBox='15px'></Icon>
-        </i>
-        <div className='contact-card--show-on-hover'>
-          <i className='contact-card__icon'>
-            <Link to={`/edit/${id}`}>
-              <Icon icon='edit' sizeBox='15px'></Icon>
-            </Link>
-          </i>
-          <i className='contact-card__icon'>
-            <Icon icon='trash' sizeBox='15px'></Icon>
-          </i>
-        </div>
-      </div>
-    )
-  }
-}
-export default CardHeader
+            sizeBox='15px'
+          />
+        )}
+      </Subscribe>
+
+    </i>
+    <div className='contact-card--show-on-hover'>
+      <i className='contact-card__icon'>
+        <Link to={`/person/edit/${id}`}>
+          <Icon icon='edit' sizeBox='15px'></Icon>
+        </Link>
+      </i>
+      <i className='contact-card__icon'>
+        <Icon icon='trash' sizeBox='15px'></Icon>
+      </i>
+    </div>
+  </div>
+)

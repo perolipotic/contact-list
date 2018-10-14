@@ -12,5 +12,5 @@ const ContactEmailText = () => {
     </div>
   )
 }
-
+//label detals
 export default ContactEmailText;
