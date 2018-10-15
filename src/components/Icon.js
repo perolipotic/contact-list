@@ -27,7 +27,7 @@ const Icon = ({ icon, sizeBox, onClick }) => {
   return (
     <img
       onClick={onClick}
-      style={{ width: sizeBox, height: sizeBox }}
+      style={{ width: sizeBox, height: sizeBox, cursor: 'pointer' }}
       src={icons[icon]}
       alt={`icon-${icon}`} />
   )

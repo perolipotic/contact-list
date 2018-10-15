@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Icon from '../Icon';
+import { Subscribe } from 'unstated';
+import ContactsContainer from '../../unstated/ContactsContainer';
 
-const ContactHeader = ({ showName, fullName, edit, view }) => {
+const ContactHeader = ({ showName, fullName, edit, view, id, isFavourite }) => {
   return (
     <div className="contact-info__header__wrapper">
       <div className="contact-info__header">
@@ -21,10 +23,20 @@ const ContactHeader = ({ showName, fullName, edit, view }) => {
         </div>}
         {!showName && view && <div className="contact-info--icons">
           <i className="contact-info__icon">
-            <Icon icon='favourite' sizeBox='15px'></Icon>
+            <Subscribe to={[ContactsContainer]}>
+              {({ toggleFavourite }) => (
+                <Icon
+                  onClick={() => toggleFavourite(1)}
+                  icon={isFavourite ? 'favourite' : 'notFavourite'}
+                  sizeBox='15px'
+                />
+              )}
+            </Subscribe>
           </i>
           <i className="contact-info__icon">
-            <Icon icon='edit' sizeBox='15px'></Icon>
+            <Link to={`edit/${id}`}>
+              <Icon icon='edit' sizeBox='15px'></Icon>
+            </Link>
           </i>
         </div>}
       </div>

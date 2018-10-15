@@ -4,7 +4,7 @@ import CardHeader from './CardHeader';
 import CardImage from './CardImage';
 import CardTitle from './CardTitle';
 
-const ContactCard = ({ person: { imageUrl, fullName, id, isFavourite } }) => {
+const ContactCard = ({ contact: { imageUrl, fullName, id, isFavourite } }) => {
   return (
     <div
       className='contact-card__item'>

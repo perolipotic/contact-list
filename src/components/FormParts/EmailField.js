@@ -3,7 +3,7 @@ import { Field } from "react-final-form"
 import TextInput from "./TextInput"
 import Icon from "../Icon"
 
-const EmailField = ({ email }) => {
+const EmailField = () => {
   return (
     <div className="input-wrapper">
       <p className="input-label">

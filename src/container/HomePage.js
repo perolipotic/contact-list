@@ -26,13 +26,13 @@ const HomePage = ({ fav }) => {
         </Subscribe>
 
         {!fav && <Subscribe to={[ContactsContainer]}>
-          {({ getFilteredContacts }) => getFilteredContacts().map(person => (
-            <ContactCard key={person.id} person={person} />)
+          {({ getFilteredContacts }) => getFilteredContacts().map(contact => (
+            <ContactCard key={contact.id} contact={contact} />)
           )}
         </Subscribe>}
         {fav && <Subscribe to={[ContactsContainer]}>
-          {({ getFilteredContacts }) => getFilteredContacts().map(person => (
-            person.isFavourite && <ContactCard key={person.id} person={person} />)
+          {({ getFilteredContacts }) => getFilteredContacts().map(contact => (
+            contact.isFavourite && <ContactCard key={contact.id} contact={contact} />)
           )}
         </Subscribe>}
       </div>

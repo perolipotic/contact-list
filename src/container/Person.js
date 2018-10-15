@@ -18,16 +18,13 @@ import NumberFields from '../components/FormParts/NumberFields';
 import Button from '../components/Buttons';
 
 
-const onSubmit = (values) => {
-  console.log(values)
+const onSubmit = (values, initialValues) => {
+  console.log(initialValues)
 }
 
 class Person extends React.Component {
-  state = {
-    newContact: {}
-  }
   render() {
-    const { contacts, match: { path } } = this.props;
+    const { contacts, match: { path }, newID } = this.props;
     const _id = window.location.pathname.slice(-1)[0]
     let current = {};
     contacts.map(contact => {
@@ -35,12 +32,14 @@ class Person extends React.Component {
       if (contact.id === parseInt(_id)) {
         current = contact
       }
+      if (Object.keys(current).length === 0) {
+        current = { isFavourite: false, id: newID(contacts) }
+      }
       return current
     })
     let showForm = path.includes('edit') || path.includes('add')
     let edit = path.includes('edit')
     let view = path.includes('contact')
-
     console.log(current)
     return (
       <div className='contact-info'>
@@ -52,6 +51,8 @@ class Person extends React.Component {
             view={view}
             edit={edit}
             showName={showForm}
+            isFavourite={current.isFavourite}
+            id={current.id}
             fullName={current.fullName} />
         </div>
         <div className={`contact-info__body ${showForm ? 'contact-info__layout' : ''}`}>
@@ -66,7 +67,7 @@ class Person extends React.Component {
               ...arrayMutators
             }}
             onSubmit={onSubmit}
-            initialValues={showForm ? current : this.state.newContact}
+            initialValues={current}
             render={({
               state,
               handleSubmit,
@@ -79,7 +80,10 @@ class Person extends React.Component {
                   onSubmit={handleSubmit}>
                   <NameField {...current.fullName}></NameField>
                   <EmailField {...current.email}></EmailField>
-                  <NumberFields pop={pop} push={push}></NumberFields>
+                  {current.phoneNumbers.map((number, index) =>
+                    console.log(number.label)
+                    /*  <NumberFields key={index} {...number} pop={pop} push={push}></NumberFields> */
+                  )}
                   <div className="btn--wrapper">
                     <Link to={"/"}>
                       <Button value={'Cancel'} type={'reset'} label={'Cancel'}>

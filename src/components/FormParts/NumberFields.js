@@ -14,7 +14,7 @@ const NumberFields = ({ pop, push }) => {
       <FieldArray name="numbers">
         {({ fields }) =>
           fields.map((name, index) => (
-            <div className="contact">
+            <div key={index} className="contact">
               <Field
                 type="number"
                 name={`${name}.number`}
