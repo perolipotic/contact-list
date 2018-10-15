@@ -14,6 +14,7 @@ const NameField = () => {
         name="firstName"
         component={TextInput}
         placeholder="First Name"
+
       />
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import Icon from '../Icon';
 
-const ContactHeader = () => {
+const ContactHeader = ({ firstName, lastName }) => {
   return (
     <div className="contact-info__header__wrapper">
       <div className="contact-info__header">
@@ -12,7 +12,7 @@ const ContactHeader = () => {
               <Icon icon="back" sizeBox="20px" />
             </Link>
           </i>
-          <p className="contact-info__title">Addie Hernandez</p>
+          <p className="contact-info__title">{firstName} {lastName}</p>
         </div>
         <div className="contact-info--icons">
           <i className="contact-info__icon">

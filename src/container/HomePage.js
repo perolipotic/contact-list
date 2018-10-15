@@ -22,7 +22,7 @@ const HomePage = ({ fav }) => {
       </Subscribe>
       <div className='contact-card--list'>
         <CardNew />
-        {!fav && < Subscribe to={[ContactsContainer]}>
+        {!fav && <Subscribe to={[ContactsContainer]}>
           {({ getFilteredContacts }) => getFilteredContacts().map(person => (
             <ContactCard key={person.id} person={person} />)
           )}
