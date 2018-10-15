@@ -80,10 +80,7 @@ class Person extends React.Component {
                   onSubmit={handleSubmit}>
                   <NameField {...current.fullName}></NameField>
                   <EmailField {...current.email}></EmailField>
-                  {current.phoneNumbers.map((number, index) =>
-                    console.log(number.label)
-                    /*  <NumberFields key={index} {...number} pop={pop} push={push}></NumberFields> */
-                  )}
+                  <NumberFields pop={pop} push={push}></NumberFields>
                   <div className="btn--wrapper">
                     <Link to={"/"}>
                       <Button value={'Cancel'} type={'reset'} label={'Cancel'}>

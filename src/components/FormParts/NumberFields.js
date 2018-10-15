@@ -11,12 +11,11 @@ const NumberFields = ({ pop, push }) => {
         <Icon icon="phone" sizeBox="15px"></Icon>
         <span className="input-label__text">numbers</span>
       </p>
-      <FieldArray name="numbers">
+      <FieldArray name="phoneNumbers">
         {({ fields }) =>
           fields.map((name, index) => (
             <div key={index} className="contact">
               <Field
-                type="number"
                 name={`${name}.number`}
                 component={TextInput}
                 placeholder="Number"
