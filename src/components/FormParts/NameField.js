@@ -11,9 +11,9 @@ const NameField = () => {
         <span className="input-label__text">full name</span>
       </p>
       <Field
-        name="firstName"
+        name="fullName"
         component={TextInput}
-        placeholder="First Name"
+        placeholder="Full Name"
 
       />
     </div>

@@ -3,7 +3,7 @@ import { Field } from "react-final-form"
 import TextInput from "./TextInput"
 import Icon from "../Icon"
 
-const NameField = () => {
+const EmailField = ({ email }) => {
   return (
     <div className="input-wrapper">
       <p className="input-label">
@@ -20,4 +20,4 @@ const NameField = () => {
   );
 };
 
-export default NameField;
+export default EmailField;

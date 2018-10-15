@@ -35,11 +35,20 @@ export default class ContactsContainer extends Container {
 
   getFilteredContacts = () => {
     const { searchValue, contacts } = this.state;
-    let filteredPersons = contacts.filter(person => {
-      const fullName = person.name + ' ' + person.lastName;
-      return fullName.toLowerCase().includes(searchValue.toLowerCase())
+    let filteredPersons = contacts.filter(contact => {
+      return contact.fullName.toLowerCase().includes(searchValue.toLowerCase())
     })
 
     return filteredPersons
   }
+
+  newID = (contacts) => {
+    let idArr = []
+    contacts.map(contact => {
+      return idArr.push(contact.id)
+    })
+    return Math.max(...idArr) + 1
+  }
 }
+
+

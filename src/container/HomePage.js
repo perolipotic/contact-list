@@ -21,7 +21,10 @@ const HomePage = ({ fav }) => {
         )}
       </Subscribe>
       <div className='contact-card--list'>
-        <CardNew />
+        <Subscribe to={[ContactsContainer]}>
+          {({ newID, state: { contacts } }) => <CardNew contacts={contacts} newID={newID} />}
+        </Subscribe>
+
         {!fav && <Subscribe to={[ContactsContainer]}>
           {({ getFilteredContacts }) => getFilteredContacts().map(person => (
             <ContactCard key={person.id} person={person} />)

@@ -1,51 +1,64 @@
 [
   {
     "id": 1,
-    "name": "Mijo",
-    "lastName": "Caktaš",
+    "fullName": "Mijo Caktaš",
+    "email": "mijo@hajduk.com",
     "imageUrl": "https://hajduk.hr/sadrzaj/igraci/profil/2014_18-caktas.jpg",
+    "phoneNumbers": [
+      {
+        "id": "id,",
+        "label": "home",
+        "number": "+385 21234465"
+      }
+    ],
     "isFavourite": false
   },
   {
     "id": 2,
-    "name": "Milan",
-    "lastName": "Sjerković",
+    "fullName": "Milan Sjerković",
+    "email": "milan@novatv.com",
     "imageUrl": "http://mojzagreb.info/images/uploads/vijesti/5414/1milansijerkovic.jpg",
+    "phoneNumbers": [],
     "isFavourite": false
   },
   {
     "id": 3,
-    "name": "Yvonne",
-    "lastName": "Strahovski",
+    "fullName": "Yvonne Strahovski",
+    "email": "ivona@google.com",
     "imageUrl": "https://i.pinimg.com/originals/d6/41/0d/d6410d6208f436ebe541217ad3e82dfe.jpg",
+    "phoneNumbers": [],
     "isFavourite": true
   },
   {
     "id": 4,
-    "name": "Petar",
-    "lastName": "Grašo",
+    "fullName": "Petar Grašo",
+    "email": "petar@novatv.com",
     "imageUrl": "http://radiokameleon.ba/wp-content/uploads/2016/10/petar-graso.jpg",
+    "phoneNumbers": [],
     "isFavourite": false
   },
   {
     "id": 5,
-    "name": "Ivana",
-    "lastName": "Mišerić",
+    "fullName": "Ivana Mišerić",
+    "email": "ivana@otvoreni.com",
     "imageUrl": "https://www.scena.hr/wp-content/uploads/2014/06/Ivana-Miseric-1.jpg",
+    "phoneNumbers": [],
     "isFavourite": true
   },
   {
     "id": 6,
-    "name": "Lionel",
-    "lastName": "Messi",
+    "fullName": "Lionel Messi",
+    "email": "leo@barca.com",
     "imageUrl": "https://olorisupergal.com/wp-content/uploads/2016/07/lionel-messi.jpg",
+    "phoneNumbers": [],
     "isFavourite": false
   },
   {
     "id": 7,
-    "name": "Rene",
-    "lastName": "Bitorajac",
+    "fullName": "Rene Bitorajac",
+    "email": "bitanga@princeza.com",
     "imageUrl": "https://image.dnevnik.hr/media/images/996x562/May2016/61225290-rene-bitorajac.jpg",
+    "phoneNumbers": [],
     "isFavourite": false
   }
 ]

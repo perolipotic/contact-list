@@ -27,7 +27,8 @@
   &__text{
     color:$lightGray;
     display: flex;
-    margin-bottom: 15px;  
+    margin-bottom: 15px; 
+    text-transform: uppercase; 
   }
   &--location{
     flex-basis: 90px;

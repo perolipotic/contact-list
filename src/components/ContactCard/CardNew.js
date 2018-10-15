@@ -2,11 +2,12 @@ import React from 'react'
 import Icon from '../Icon'
 import { Link } from 'react-router-dom'
 
-const CardNew = () => {
+const CardNew = ({ contacts, newID }) => {
+
   return (
-    <Link to={'/contact/add/'} className='contact-card__item contact-card__item--new'>
+    <Link to={`contact/add/${newID(contacts)}`} className='contact-card__item contact-card__item--new'>
       <Icon icon='plus' sizeBox='15px' />
-      <p className="contact-card--new-title">Add new</p>
+      <p className="contact-card--new-title">Add new </p>
     </Link>
   )
 }

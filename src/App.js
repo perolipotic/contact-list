@@ -11,7 +11,7 @@ const ConnectedPerson = () => {
   return (
     <Subscribe to={[ContactsContainer]}>
       {({ state: { contacts } }) => (
-        <Person edit add contacts={contacts} />)}
+        <Person contacts={contacts} />)}
     </Subscribe>
   )
 }
@@ -26,8 +26,8 @@ class App extends Component {
               <Route exact path="/" component={HomePage} />
               <Route exact path="/fav" component={props => <HomePage fav {...props} />} />
               <Route exact path="/contact/:id" component={ConnectedPerson} />
-              <Route exact path="/contact/add" component={props => <ConnectedPerson  {...props} />} />
               <Route exact path="/contact/edit/:id" component={props => <ConnectedPerson   {...props} />} />
+              <Route exact path="/contact/add/:id" component={props => <ConnectedPerson  {...props} />} />
             </Switch>
           </Router>
         </div>

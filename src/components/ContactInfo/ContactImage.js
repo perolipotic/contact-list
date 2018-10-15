@@ -1,12 +1,13 @@
 import React from 'react'
 
-const ContactImage = () => {
+const ContactImage = ({ fullName, imageUrl }) => {
   return (
     <div className="contact-image__wrapper">
-      <div className='contact-image'>
+      <div className='contact-image'
+        style={{ backgroundImage: `url(${imageUrl})` }} >
       </div>
       <div className="contact-image--title">
-        Addie Hernadez</div>
+        {fullName}</div>
     </div>
   )
 }

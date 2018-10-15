@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import Icon from '../Icon';
 
-const ContactHeader = ({ firstName, lastName }) => {
+const ContactHeader = ({ showName, fullName, edit, view }) => {
   return (
     <div className="contact-info__header__wrapper">
       <div className="contact-info__header">
@@ -12,16 +12,21 @@ const ContactHeader = ({ firstName, lastName }) => {
               <Icon icon="back" sizeBox="20px" />
             </Link>
           </i>
-          <p className="contact-info__title">{firstName} {lastName}</p>
+          <p className="contact-info__title">{!showName && fullName}</p>
         </div>
-        <div className="contact-info--icons">
+        {edit && <div className="contact-info--icons">
+          <i className="contact-info__icon">
+            <Icon icon='trash' sizeBox='15px'></Icon>
+          </i>
+        </div>}
+        {!showName && view && <div className="contact-info--icons">
           <i className="contact-info__icon">
             <Icon icon='favourite' sizeBox='15px'></Icon>
           </i>
           <i className="contact-info__icon">
-            <Icon icon='trash' sizeBox='15px'></Icon>
+            <Icon icon='edit' sizeBox='15px'></Icon>
           </i>
-        </div>
+        </div>}
       </div>
     </div>
   )
