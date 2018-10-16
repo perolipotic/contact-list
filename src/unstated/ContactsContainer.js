@@ -67,7 +67,9 @@ export default class ContactsContainer extends Container {
   deleteContact = (contacts, _id) => {
     let removeIndex = contacts.findIndex(item => item.id === parseInt(_id))
     contacts.splice(removeIndex, 1)
+    this.saveContacts()
   }
 }
+
 
 

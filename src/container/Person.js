@@ -20,14 +20,11 @@ import UploadPhoto from '../components/FormParts/UploadPhoto';
 
 
 class Person extends React.Component {
-  state = {
-    current: {}
-  }
 
   onSubmit = (values) => {
     const { history: { location: { pathname } }, contacts, history } = this.props
     let edit = pathname.includes('edit') || false
-    const _id = window.location.pathname.slice(-1)[0]
+    const _id = pathname.slice(-1)[0]
     !edit && this.props.addNewContact(contacts, { ...values })
     edit && this.props.updateContact(contacts, { ...values }, _id)
     history.push('/')
@@ -35,10 +32,10 @@ class Person extends React.Component {
 
   render() {
 
-    const { contacts, match: { path }, newID, deleteContact } = this.props;
+    const { contacts, match: { path, url }, newID, deleteContact } = this.props;
 
-    let { current } = this.state;
-    const _id = window.location.pathname.slice(-1)[0]
+    let current = {}
+    const _id = url.slice(-1)[0]
 
     contacts.map(contact => {
 
@@ -65,17 +62,14 @@ class Person extends React.Component {
         <div className="contact-info__wrapper extended-line--green">
           <ContactImage
             showForm={showForm}
-            imageUrl={current.imageUrl}
-            fullName={current.fullName} />
+            current={current} />
           <ContactHeader
             view={view}
             edit={edit}
             contacts={contacts}
             deleteContact={deleteContact}
             showName={showForm}
-            isFavourite={current.isFavourite}
-            id={current.id}
-            fullName={current.fullName} />
+            current={current} />
         </div>
         <div className={`contact-info__body ${showForm ? 'contact-info__layout' : ''}`}>
           {!showForm &&
@@ -99,7 +93,7 @@ class Person extends React.Component {
               values }) => (
                 <form
                   onSubmit={handleSubmit}>
-                  <UploadPhoto />
+                  <UploadPhoto current={current} {...current.imageUrl} />
                   <NameField {...current.fullName}></NameField>
                   <EmailField {...current.email}></EmailField>
                   <NumberFields pop={pop} push={push}></NumberFields>

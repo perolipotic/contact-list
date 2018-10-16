@@ -3,13 +3,15 @@ import { Field } from "react-final-form"
 import TextInput from "./TextInput"
 import Icon from "../Icon"
 
-const UploadPhoto = () => {
+const UploadPhoto = ({ current: { imageUrl } }) => {
   return (
     <div className="photo-wrapper">
       <div className="photo__icon">
-        <Icon icon="upload" sizeBox="25px"></Icon>
+        {!imageUrl && <Icon icon="upload" sizeBox="25px"></Icon>}
+        {imageUrl && <Icon icon="clear" sizeBox="15px"></Icon>}
       </div>
-      <div className="photo--upload">
+      <div className="photo--upload"
+        style={{ backgroundImage: `url(${imageUrl})` }}>
         <Field
           type="file"
           name="file"

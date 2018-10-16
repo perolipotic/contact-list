@@ -8,25 +8,44 @@
     display: flex;
     cursor: pointer;
     @media screen and (max-width:660px) {
-      position: static; 
+      position: relative;
+      width: 180px;
+      margin: 0 auto;
     }
   }
-  &-wrapper:hover > &__icon{
-    opacity: 1;
-    transition: all ease 0.3s
-  }
+  
   &--upload{
-    background-color: #abd9dd;
+    background-color: $lightGreen;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 180px;
     height: 180px;
     border-radius: 100%;
     cursor: pointer;
-    border: 4px solid #bbc4c3
+    border: 4px solid $lightGray;
+    transition: all ease 0.3s;
    
   }
   &__icon{
     position: absolute;
     opacity:0;
     transition: all ease 0.3s
+  }
+  &-wrapper:hover > &__icon{
+    opacity: 1;
+    transition: all ease 0.3s
+  }
+  &-wrapper:hover > &--upload:after{
+    position: absolute;
+    content: "";
+    background: black;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    opacity: 0.1;
+    border-radius: 100%;
+    transition: all ease 0.3s;
   }
 }

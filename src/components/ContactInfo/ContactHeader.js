@@ -1,18 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Icon from '../Icon';
+import { withRouter } from 'react-router';
 import { Subscribe } from 'unstated';
 import ContactsContainer from '../../unstated/ContactsContainer';
 
 const ContactHeader = ({
   showName,
   contacts,
-  fullName,
   edit,
   view,
-  id,
-  isFavourite,
-  deleteContact }) => {
+  current: { id, isFavourite, fullName },
+  deleteContact, history }) => {
   return (
     <div className="contact-info__header__wrapper">
       <div className="contact-info__header">
@@ -27,7 +26,10 @@ const ContactHeader = ({
         {edit && <div className="contact-info--icons">
           <i className="contact-info__icon">
             <Icon
-              onClick={() => deleteContact(contacts, id)}
+              onClick={async () => {
+                await deleteContact(contacts, id)
+                history.push("/")
+              }}
               icon='trash' sizeBox='15px'></Icon>
           </i>
         </div>}
@@ -54,4 +56,4 @@ const ContactHeader = ({
   )
 }
 
-export default ContactHeader
+export default withRouter(ContactHeader)
