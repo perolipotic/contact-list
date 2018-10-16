@@ -8,4 +8,11 @@
   &::-webkit-input-placeholder { 
     color: $formColor;
   }
+  &[type="file"]{
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
 }

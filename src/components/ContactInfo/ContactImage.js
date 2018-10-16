@@ -1,14 +1,16 @@
 import React from 'react'
 
-const ContactImage = ({ fullName, imageUrl }) => {
+const ContactImage = ({ fullName, imageUrl, showForm }) => {
   return (
-    <div className="contact-image__wrapper">
-      <div className='contact-image'
-        style={{ backgroundImage: `url(${imageUrl})` }} >
-      </div>
-      <div className="contact-image--title">
-        {fullName}</div>
-    </div>
+    <React.Fragment>
+      {!showForm && <div className="contact-image__wrapper">
+        <div className='contact-image'
+          style={{ backgroundImage: `url(${imageUrl})` }} >
+        </div>
+        <div className="contact-image--title">
+          {fullName}</div>
+      </div>}
+    </React.Fragment>
   )
 }
 export default ContactImage

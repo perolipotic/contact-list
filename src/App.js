@@ -10,8 +10,14 @@ import ContactsContainer from './unstated/ContactsContainer'
 const ConnectedPerson = () => {
   return (
     <Subscribe to={[ContactsContainer]}>
-      {({ state: { contacts }, newID }) => (
-        <Person contacts={contacts} newID={newID} />)}
+      {({ state: { contacts }, newID, addNewContact, updateContact, deleteContact }) => (
+        <Person
+          contacts={contacts}
+          newID={newID}
+          addNewContact={addNewContact}
+          updateContact={updateContact}
+          deleteContact={deleteContact}
+        />)}
     </Subscribe>
   )
 }

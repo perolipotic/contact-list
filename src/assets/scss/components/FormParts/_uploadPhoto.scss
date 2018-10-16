@@ -1,0 +1,32 @@
+.photo{
+  &-wrapper{
+    position: absolute; 
+    left: 0px;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    @media screen and (max-width:660px) {
+      position: static; 
+    }
+  }
+  &-wrapper:hover > &__icon{
+    opacity: 1;
+    transition: all ease 0.3s
+  }
+  &--upload{
+    background-color: #abd9dd;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 4px solid #bbc4c3
+   
+  }
+  &__icon{
+    position: absolute;
+    opacity:0;
+    transition: all ease 0.3s
+  }
+}

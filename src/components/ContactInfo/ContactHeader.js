@@ -4,7 +4,15 @@ import Icon from '../Icon';
 import { Subscribe } from 'unstated';
 import ContactsContainer from '../../unstated/ContactsContainer';
 
-const ContactHeader = ({ showName, fullName, edit, view, id, isFavourite }) => {
+const ContactHeader = ({
+  showName,
+  contacts,
+  fullName,
+  edit,
+  view,
+  id,
+  isFavourite,
+  deleteContact }) => {
   return (
     <div className="contact-info__header__wrapper">
       <div className="contact-info__header">
@@ -18,7 +26,9 @@ const ContactHeader = ({ showName, fullName, edit, view, id, isFavourite }) => {
         </div>
         {edit && <div className="contact-info--icons">
           <i className="contact-info__icon">
-            <Icon icon='trash' sizeBox='15px'></Icon>
+            <Icon
+              onClick={() => deleteContact(contacts, id)}
+              icon='trash' sizeBox='15px'></Icon>
           </i>
         </div>}
         {!showName && view && <div className="contact-info--icons">
@@ -26,7 +36,7 @@ const ContactHeader = ({ showName, fullName, edit, view, id, isFavourite }) => {
             <Subscribe to={[ContactsContainer]}>
               {({ toggleFavourite }) => (
                 <Icon
-                  onClick={() => toggleFavourite(1)}
+                  onClick={() => toggleFavourite(id)}
                   icon={isFavourite ? 'favourite' : 'notFavourite'}
                   sizeBox='15px'
                 />

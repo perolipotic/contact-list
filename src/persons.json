@@ -6,7 +6,6 @@
     "imageUrl": "https://hajduk.hr/sadrzaj/igraci/profil/2014_18-caktas.jpg",
     "phoneNumbers": [
       {
-        "id": "id,",
         "label": "home",
         "number": "+385 21234465"
       }
@@ -18,7 +17,12 @@
     "fullName": "Milan Sjerković",
     "email": "milan@novatv.com",
     "imageUrl": "http://mojzagreb.info/images/uploads/vijesti/5414/1milansijerkovic.jpg",
-    "phoneNumbers": [],
+    "phoneNumbers": [
+      {
+        "label": "home",
+        "number": "+385 21234465"
+      }
+    ],
     "isFavourite": false
   },
   {
@@ -26,7 +30,12 @@
     "fullName": "Yvonne Strahovski",
     "email": "ivona@google.com",
     "imageUrl": "https://i.pinimg.com/originals/d6/41/0d/d6410d6208f436ebe541217ad3e82dfe.jpg",
-    "phoneNumbers": [],
+    "phoneNumbers": [
+      {
+        "label": "home",
+        "number": "+385 21234465"
+      }
+    ],
     "isFavourite": true
   },
   {
@@ -34,7 +43,12 @@
     "fullName": "Petar Grašo",
     "email": "petar@novatv.com",
     "imageUrl": "http://radiokameleon.ba/wp-content/uploads/2016/10/petar-graso.jpg",
-    "phoneNumbers": [],
+    "phoneNumbers": [
+      {
+        "label": "home",
+        "number": "+385 21234465"
+      }
+    ],
     "isFavourite": false
   },
   {
@@ -42,7 +56,12 @@
     "fullName": "Ivana Mišerić",
     "email": "ivana@otvoreni.com",
     "imageUrl": "https://www.scena.hr/wp-content/uploads/2014/06/Ivana-Miseric-1.jpg",
-    "phoneNumbers": [],
+    "phoneNumbers": [
+      {
+        "label": "home",
+        "number": "+385 21234465"
+      }
+    ],
     "isFavourite": true
   },
   {
@@ -50,7 +69,12 @@
     "fullName": "Lionel Messi",
     "email": "leo@barca.com",
     "imageUrl": "https://olorisupergal.com/wp-content/uploads/2016/07/lionel-messi.jpg",
-    "phoneNumbers": [],
+    "phoneNumbers": [
+      {
+        "label": "home",
+        "number": "+385 21234465"
+      }
+    ],
     "isFavourite": false
   },
   {
@@ -58,7 +82,12 @@
     "fullName": "Rene Bitorajac",
     "email": "bitanga@princeza.com",
     "imageUrl": "https://image.dnevnik.hr/media/images/996x562/May2016/61225290-rene-bitorajac.jpg",
-    "phoneNumbers": [],
+    "phoneNumbers": [
+      {
+        "label": "home",
+        "number": "+385 21234465"
+      }
+    ],
     "isFavourite": false
   }
 ]

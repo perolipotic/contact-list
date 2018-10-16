@@ -9,6 +9,7 @@ import back from '../assets/images/icons/back.svg';
 import email from '../assets/images/icons/email.svg';
 import phone from '../assets/images/icons/phone.svg';
 import user from '../assets/images/icons/user.svg';
+import upload from '../assets/images/icons/upload.svg';
 
 const icons = {
   search,
@@ -20,7 +21,8 @@ const icons = {
   back,
   email,
   phone,
-  user
+  user,
+  upload,
 }
 
 const Icon = ({ icon, sizeBox, onClick }) => {

@@ -11,45 +11,67 @@ import ContactImage from '../components/ContactInfo/ContactImage';
 import ContactHeader from '../components/ContactInfo/ContactHeader';
 import ContactEmailText from '../components/ContactInfo/ContactEmailText';
 import ContactNumberText from '../components/ContactInfo/ContactNumberText';
+import Button from '../components/Buttons';
 
 import NameField from '../components/FormParts/NameField';
 import EmailField from '../components/FormParts/EmailField';
 import NumberFields from '../components/FormParts/NumberFields';
-import Button from '../components/Buttons';
+import UploadPhoto from '../components/FormParts/UploadPhoto';
 
-
-const onSubmit = (values, initialValues) => {
-  console.log(initialValues)
-}
 
 class Person extends React.Component {
-  render() {
-    const { contacts, match: { path }, newID } = this.props;
+  state = {
+    current: {}
+  }
+
+  onSubmit = (values) => {
+    const { history: { location: { pathname } }, contacts, history } = this.props
+    let edit = pathname.includes('edit') || false
     const _id = window.location.pathname.slice(-1)[0]
-    let current = {};
+    !edit && this.props.addNewContact(contacts, { ...values })
+    edit && this.props.updateContact(contacts, { ...values }, _id)
+    history.push('/')
+  }
+
+  render() {
+
+    const { contacts, match: { path }, newID, deleteContact } = this.props;
+
+    let { current } = this.state;
+    const _id = window.location.pathname.slice(-1)[0]
+
     contacts.map(contact => {
 
       if (contact.id === parseInt(_id)) {
         current = contact
       }
       if (Object.keys(current).length === 0) {
-        current = { isFavourite: false, id: newID(contacts) }
+        current = {
+          id: newID(contacts),
+          isFavourite: false,
+          phoneNumbers: [{
+
+          }]
+        }
       }
       return current
     })
     let showForm = path.includes('edit') || path.includes('add')
     let edit = path.includes('edit')
     let view = path.includes('contact')
-    console.log(current)
+
     return (
       <div className='contact-info'>
         <div className="contact-info__wrapper extended-line--green">
           <ContactImage
+            showForm={showForm}
             imageUrl={current.imageUrl}
             fullName={current.fullName} />
           <ContactHeader
             view={view}
             edit={edit}
+            contacts={contacts}
+            deleteContact={deleteContact}
             showName={showForm}
             isFavourite={current.isFavourite}
             id={current.id}
@@ -66,18 +88,18 @@ class Person extends React.Component {
             mutators={{
               ...arrayMutators
             }}
-            onSubmit={onSubmit}
+            onSubmit={this.onSubmit}
             initialValues={current}
             render={({
               state,
               handleSubmit,
-              mutators: { push, pop },
-              form,
+              form: { mutators: { pop, push } },
               submitting,
               pristine,
               values }) => (
                 <form
                   onSubmit={handleSubmit}>
+                  <UploadPhoto />
                   <NameField {...current.fullName}></NameField>
                   <EmailField {...current.email}></EmailField>
                   <NumberFields pop={pop} push={push}></NumberFields>
@@ -89,6 +111,7 @@ class Person extends React.Component {
                     <Button value={'Save'} label={'Save'} ></Button>
                   </div>
                 </form>
+
               )}
           />}
         </div>

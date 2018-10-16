@@ -25,13 +25,13 @@ const NumberFields = ({ pop, push }) => {
                 component={TextInput}
                 placeholder="Label"
               />
-              <div onClick={() => pop('numbers', undefined)}
+              <div onClick={() => pop('phoneNumbers', undefined)}
                 className="contact--delete"></div>
             </div>
           ))}
       </FieldArray>
       <div
-        onClick={() => push('numbers', undefined)}
+        onClick={() => push('phoneNumbers', undefined)}
         className="contact--add-new">
         <div className="contact--add"></div>
         <p className="contact--add__text">Add number</p>
