@@ -75,6 +75,17 @@
       display: none;
     }
   }
+  &__icon{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &-text{
+      margin-right: 10px;
+      font-size: 0.875em;
+      color:$lightGray
+
+    }
+  }
   &__icon:first-child{
     margin-right: 20px;
   }

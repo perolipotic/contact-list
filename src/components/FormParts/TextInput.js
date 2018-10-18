@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const TextInput = ({ input, meta, type, placeholder, onChange }) => {
+const TextInput = ({ input, meta, type, placeholder, onClick }) => {
   return <input
     className="input"
     type={type}
-    onChange={onChange}
     placeholder={placeholder}
+    onClick={onClick}
     {...input}
   />;
 };

@@ -4,7 +4,7 @@ import { Field } from "react-final-form"
 import TextInput from "./TextInput"
 import Icon from "../Icon"
 
-const NumberFields = ({ pop, push }) => {
+const NumberFields = ({ remove, push }) => {
   return (
     <div className="input-wrapper border-none extended-line--green form-line-position">
       <p className="input-label">
@@ -25,7 +25,7 @@ const NumberFields = ({ pop, push }) => {
                 component={TextInput}
                 placeholder="Label"
               />
-              <div onClick={() => pop('phoneNumbers', undefined)}
+              <div onClick={() => fields.remove(index)}
                 className="contact--delete"></div>
             </div>
           ))}

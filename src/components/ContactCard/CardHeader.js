@@ -25,7 +25,10 @@ export default ({ id, isFavourite }) => (
         </Link>
       </i>
       <i className='contact-card__icon'>
-        <Icon icon='trash' sizeBox='15px'></Icon>
+        <Subscribe to={[ContactsContainer]}>{({ openModal }) => (<Icon
+          onClick={() => openModal()}
+          icon='trash' sizeBox='15px'></Icon>)}
+        </Subscribe>
       </i>
     </div>
   </div>

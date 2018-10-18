@@ -20,7 +20,6 @@ import UploadPhoto from '../components/FormParts/UploadPhoto';
 
 
 class Person extends React.Component {
-
   onSubmit = (values) => {
     const { history: { location: { pathname } }, contacts, history } = this.props
     let edit = pathname.includes('edit') || false
@@ -64,6 +63,7 @@ class Person extends React.Component {
             showForm={showForm}
             current={current} />
           <ContactHeader
+            isOpen={this.props.isOpen}
             view={view}
             edit={edit}
             contacts={contacts}
@@ -87,16 +87,16 @@ class Person extends React.Component {
             render={({
               state,
               handleSubmit,
-              form: { mutators: { pop, push } },
+              form: { mutators: { remove, push } },
               submitting,
               pristine,
               values }) => (
                 <form
                   onSubmit={handleSubmit}>
-                  <UploadPhoto current={current} {...current.imageUrl} />
+                  <UploadPhoto current={current}  {...current.imageUrl} />
                   <NameField {...current.fullName}></NameField>
                   <EmailField {...current.email}></EmailField>
-                  <NumberFields pop={pop} push={push}></NumberFields>
+                  <NumberFields remove={remove} push={push}></NumberFields>
                   <div className="btn--wrapper">
                     <Link to={"/"}>
                       <Button value={'Cancel'} type={'reset'} label={'Cancel'}>
@@ -105,8 +105,8 @@ class Person extends React.Component {
                     <Button value={'Save'} label={'Save'} ></Button>
                   </div>
                 </form>
-
               )}
+
           />}
         </div>
       </div>

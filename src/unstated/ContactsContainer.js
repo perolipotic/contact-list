@@ -15,6 +15,7 @@ export default class ContactsContainer extends Container {
   state = {
     contacts: loadData('contacts') || persons,
     searchValue: '',
+    isOpen: false
   }
 
   saveContacts = () => saveData('contacts', this.state.contacts)
@@ -68,6 +69,14 @@ export default class ContactsContainer extends Container {
     let removeIndex = contacts.findIndex(item => item.id === parseInt(_id))
     contacts.splice(removeIndex, 1)
     this.saveContacts()
+  }
+  openModal = () => {
+    document.querySelector('body').style.overflow = 'hidden'
+    this.setState({ isOpen: true })
+  }
+  closeModal = () => {
+    this.setState({ isOpen: false })
+    document.querySelector('body').style.overflow = 'auto'
   }
 }
 

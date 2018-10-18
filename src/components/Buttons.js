@@ -6,6 +6,8 @@ const pickStyle = (label) => {
       return 'btn--success'
     case 'Cancel':
       return 'btn--cancel'
+    case 'Delete':
+      return 'btn--success'
     default:
       return ''
   }

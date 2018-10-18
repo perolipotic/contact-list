@@ -6,6 +6,7 @@ import Header from './components/Header'
 import HomePage from './container/HomePage';
 import Person from './container/Person';
 import ContactsContainer from './unstated/ContactsContainer'
+import Modal from './components/Modal';
 
 const ConnectedPerson = () => {
   return (
@@ -25,6 +26,9 @@ class App extends Component {
   render() {
     return (
       <Provider>
+        <Subscribe to={[ContactsContainer]}>
+          {({ state: { isOpen } }) => (<Modal isOpen={isOpen}></Modal>)}
+        </Subscribe>
         <Header />
         <div className='container'>
           <Router>

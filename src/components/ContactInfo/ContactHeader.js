@@ -7,7 +7,6 @@ import ContactsContainer from '../../unstated/ContactsContainer';
 
 const ContactHeader = ({
   showName,
-  contacts,
   edit,
   view,
   current: { id, isFavourite, fullName },
@@ -24,14 +23,16 @@ const ContactHeader = ({
           <p className="contact-info__title">{!showName && fullName}</p>
         </div>
         {edit && <div className="contact-info--icons">
-          <i className="contact-info__icon">
-            <Icon
-              onClick={async () => {
-                await deleteContact(contacts, id)
-                history.push("/")
-              }}
-              icon='trash' sizeBox='15px'></Icon>
-          </i>
+
+
+          <Subscribe to={[ContactsContainer]}>{({ openModal }) => (
+            <i onClick={() => openModal()} className="contact-info__icon">
+              <span className="contact-info__icon-text">Delete</span>
+              <Icon icon='trash' sizeBox='15px'></Icon>
+            </i>)}
+          </Subscribe>
+
+
         </div>}
         {!showName && view && <div className="contact-info--icons">
           <i className="contact-info__icon">
