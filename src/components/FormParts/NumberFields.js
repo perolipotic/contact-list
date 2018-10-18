@@ -3,7 +3,7 @@ import { FieldArray } from 'react-final-form-arrays'
 import { Field } from "react-final-form"
 import TextInput from "./TextInput"
 import Icon from "../Icon"
-import { isEmpty } from "../../utils/helpers";
+import { isEmpty, isNumber } from "../../utils/helpers";
 
 const NumberFields = ({ remove, push }) => {
   return (
@@ -20,7 +20,7 @@ const NumberFields = ({ remove, push }) => {
                 name={`${name}.number`}
                 component={TextInput}
                 placeholder="Number"
-                validate={isEmpty}
+                validate={isEmpty && isNumber}
               />
               <Field
                 name={`${name}.label`}

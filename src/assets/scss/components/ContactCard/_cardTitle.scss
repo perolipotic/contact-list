@@ -5,7 +5,10 @@
     font-weight: bold;
     margin: 5px 0;
     @include max-width-660 {
-      font-size: 1em;
+      font-size: 0.875em;
+      overflow: hidden;
+      white-space: pre;
+      max-width: 135px;
     }
   }
 }
