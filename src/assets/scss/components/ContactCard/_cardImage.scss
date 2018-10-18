@@ -8,8 +8,7 @@
     z-index: 2;
     border-radius: 100%;
     border:3px solid $lightGray;
-
-    @media screen and (max-width:660px){
+    @include max-width-660 {
       width: 45px;
       margin-right: 15px;
       height: 45px;

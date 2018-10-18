@@ -10,7 +10,7 @@
   max-width: 1280px;
   padding:0 40px;
   margin:0 auto;
-  @media screen   and (max-width:660px){
+  @include max-width-660 {
     padding:0 15px;
     overflow: hidden;
   }
@@ -58,7 +58,7 @@ a{
   bottom: 0;
   right:0;
   }
-  @media screen and (max-width:660px){  
+  @include max-width-660 { 
     &--green::after{
       height:0px;
       width:0px;
@@ -72,7 +72,7 @@ a{
     right: -70px;
     height:1px;
     width:150px;
-    @media screen and (min-width:660px) {
+    @include min-width-660 {
       height:0px;
       width:0px;
     }

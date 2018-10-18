@@ -4,7 +4,7 @@
     font-size: 1.25em;
     font-weight: bold;
     margin: 5px 0;
-    @media screen and (max-width:660px){
+    @include max-width-660 {
       font-size: 1em;
     }
   }

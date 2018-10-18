@@ -9,13 +9,13 @@
   background-repeat: no-repeat;
   background-position: center;
   left: 0;
-  @media screen and (max-width:660px){  
+  @include max-width-660 {  
     position: static;
     width: 55px;
     height: 55px;
     }
     &__wrapper{
-      @media screen and (max-width:660px){  
+      @include max-width-660 { 
         position: static;
         order:2;
         display: flex;
@@ -28,7 +28,7 @@
       font-size: 1.5em;
       font-weight:700;
       margin-left: 10px;
-      @media screen and (min-width:660px) {
+      @include min-width-660 {
         display: none;
       }
     }

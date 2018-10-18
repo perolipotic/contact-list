@@ -1,12 +1,12 @@
 .contact-card{
   &__item{
     min-height: 152px;
-    @media screen and (max-width:660px){
+     @include max-width-660 {
      min-height: auto; 
     }
     &--new{
       border: 1px dashed $lightGreen;
-      @media screen and (max-width:660px){
+       @include max-width-660 {
         &.contact-card__item{
           justify-content: flex-start;
         }
@@ -17,7 +17,7 @@
     color:$lightGreen;
     margin-top:20px;
 
-    @media screen and (max-width:660px){
+     @include max-width-660 {
       margin:0 0 0 15px;
     }
   }

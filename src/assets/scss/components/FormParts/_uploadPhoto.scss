@@ -7,7 +7,7 @@
     align-items: center;
     display: flex;
     cursor: pointer;
-    @media screen and (max-width:660px) {
+    @include max-width-660 {
       position: relative;
       width: 180px;
       margin: 0 auto;

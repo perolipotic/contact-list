@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   margin-top: 80px;
-  @media screen and (max-width:660px){
+   @include max-width-660 {
     align-items: flex-start;
     flex-direction: column;
     margin-top: 40px;
@@ -10,7 +10,7 @@
   &__icon{
     display: flex;
     flex-basis: 100px;
-    @media screen and (max-width:660px){
+     @include max-width-660 {
       flex-basis: auto;
       margin-bottom: 15px;
     }
@@ -20,7 +20,7 @@
     position: relative;
     top:-1px;
     width: calc(100% - 100px);
-    @media screen and (max-width:660px){
+     @include max-width-660 {
      width: 100%;
     }
   }

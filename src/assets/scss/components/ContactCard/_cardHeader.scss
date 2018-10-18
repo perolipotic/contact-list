@@ -4,14 +4,14 @@
     justify-content: space-between;
     width: 100%;
 
-    @media screen and (max-width:660px){
+    @include max-width-660 {
       width: 85px;
       order:2;
     }
   }
   &__icon{
     cursor: pointer;
-    @media screen and (max-width:660px){
+   @include max-width-660 {
       margin-right: 10px
     }
   }
@@ -19,19 +19,19 @@
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 
-    @media screen and (max-width:660px){
+   @include max-width-660 {
       opacity: 1;
     }
   }
   &--show-on-hover &__icon:first-child{
     margin-right: 20px;
-    @media screen and (max-width:660px){
+   @include max-width-660 {
       margin-right: 7px
     }
   }
  &__icon:last-child{
 
-    @media screen and (max-width:660px){
+   @include max-width-660 {
       margin-right: 0px
     }
   }

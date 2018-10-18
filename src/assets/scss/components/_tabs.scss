@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   margin: 50px 0;
-  @media screen and (max-width:660px){
+  @include max-width-660 {
     margin: 20px 0;
   }
   &__item{
