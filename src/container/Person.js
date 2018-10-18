@@ -93,7 +93,7 @@ class Person extends React.Component {
               values }) => (
                 <form
                   onSubmit={handleSubmit}>
-                  <UploadPhoto current={current}  {...current.imageUrl} />
+                  <UploadPhoto current={values} />
                   <NameField {...current.fullName}></NameField>
                   <EmailField {...current.email}></EmailField>
                   <NumberFields remove={remove} push={push}></NumberFields>

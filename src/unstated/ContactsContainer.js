@@ -78,6 +78,10 @@ export default class ContactsContainer extends Container {
     this.setState({ isOpen: false })
     document.querySelector('body').style.overflow = 'auto'
   }
+
+  removeImage = (contact) => {
+    this.setState({ contact: [contact, ...contact.imageUrl = ''] })
+  }
 }
 
 
