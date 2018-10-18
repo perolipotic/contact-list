@@ -12,7 +12,7 @@
   @media screen and (max-width:420px){
     width: 100%;
   }
-  & input:first-child{
+  & div:first-child{
      width: 300px;
      margin-right:15px;
     @media screen and (max-width:1180px){
@@ -22,7 +22,7 @@
       width: 100%;
     }
   }
-  & input:nth-child(2){ 
+  & div:nth-child(2){ 
     width: 220px;
     margin-right: 40px;
     @media screen and (max-width:1180px){

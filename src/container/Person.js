@@ -2,9 +2,9 @@ import React from 'react';
 import { Form } from 'react-final-form'
 import arrayMutators from 'final-form-arrays'
 
-
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
+
 
 
 import ContactImage from '../components/ContactInfo/ContactImage';
@@ -94,8 +94,8 @@ class Person extends React.Component {
                 <form
                   onSubmit={handleSubmit}>
                   <UploadPhoto current={values} />
-                  <NameField {...current.fullName}></NameField>
-                  <EmailField {...current.email}></EmailField>
+                  <NameField />
+                  <EmailField />
                   <NumberFields remove={remove} push={push}></NumberFields>
                   <div className="btn--wrapper">
                     <Link to={"/"}>

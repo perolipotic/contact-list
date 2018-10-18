@@ -8,13 +8,11 @@ import ContactsContainer from "../../unstated/ContactsContainer";
 class UploadPhoto extends React.Component {
   render() {
     const { current, current: { imageUrl, id } } = this.props
-    console.log(current)
     return (
       <div className="photo-wrapper">
         <Subscribe to={[ContactsContainer]}>
           {({ removeImage }) =>
             <div className="photo__icon">
-              {console.log(imageUrl)}
               {!imageUrl == '' ?
                 <Icon onClick={() => removeImage(current, id)} icon="clear" zIndex='22' position='relative' sizeBox="25px"></Icon> :
                 <Icon icon="upload" sizeBox="25px"></Icon>

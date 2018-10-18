@@ -2,8 +2,10 @@ import React from "react";
 import { Field } from "react-final-form"
 import TextInput from "./TextInput"
 import Icon from "../Icon"
+import { isEmpty } from "../../utils/helpers";
 
 const NameField = () => {
+
   return (
     <div className="input-wrapper">
       <p className="input-label">
@@ -14,7 +16,7 @@ const NameField = () => {
         name="fullName"
         component={TextInput}
         placeholder="Full Name"
-
+        validate={isEmpty}
       />
     </div>
   );
