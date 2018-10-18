@@ -1,10 +1,21 @@
 .header{
-  background: $green;
-  border-bottom: 6px solid $lightGreen;
+  background-image: linear-gradient(to right, $green, $lightGreen);
   font-size: 0;
   text-align: center;
   padding: 16px 0;
+  position: relative;
   &__image{
     width: 200px
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to right, $lightGreen,$green);
+    bottom:-6px;
+    opacity: 0.7;
   }
 }

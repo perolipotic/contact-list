@@ -9,7 +9,7 @@ import ContactsContainer from '../unstated/ContactsContainer';
 
 const HomePage = ({ fav }) => {
   return (
-    <div className='test'>
+    <React.Fragment>
       <Tabs fav={fav} />
       <Divider green />
       <Subscribe to={[ContactsContainer]}>
@@ -36,7 +36,7 @@ const HomePage = ({ fav }) => {
           )}
         </Subscribe>}
       </div>
-    </div >
+    </React.Fragment >
   )
 }
 

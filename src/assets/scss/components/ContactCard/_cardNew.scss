@@ -5,14 +5,20 @@
      min-height: auto; 
     }
     &--new{
-      border: 1px dashed $lightGreen
+      border: 1px dashed $lightGreen;
+      @media screen and (max-width:660px){
+        &.contact-card__item{
+          justify-content: flex-start;
+        }
+      }
     }
   }
   &--new-title{
     color:$lightGreen;
     margin-top:20px;
+
     @media screen and (max-width:660px){
-      margin:0 
+      margin:0 0 0 15px;
     }
   }
 }
