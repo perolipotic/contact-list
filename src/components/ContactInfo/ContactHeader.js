@@ -26,7 +26,7 @@ const ContactHeader = ({
 
 
           <Subscribe to={[ContactsContainer]}>{({ openModal }) => (
-            <i onClick={() => openModal()} className="contact-info__icon">
+            <i onClick={() => openModal(id)} className="contact-info__icon">
               <span className="contact-info__icon-text">Delete</span>
               <Icon icon='trash' sizeBox='15px'></Icon>
             </i>)}

@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const FileInput = ({ input, meta, placeholder, onClick }) => (
+const FileInput = ({ input, meta, imageUrl, placeholder, onClick }) => (
   <div className="photo--upload"
-    style={{ backgroundImage: `url(${input.value})` }}>
+    style={{ backgroundImage: `url(${imageUrl})` }}>
     <input
       className="input"
       type="file"

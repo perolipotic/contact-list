@@ -27,7 +27,7 @@ const icons = {
   clear
 }
 
-const Icon = ({ icon, sizeBox, onClick, position, zIndex }) => {
+const Icon = ({ icon, sizeBox, onClick, position, zIndex, padding, borderRadius }) => {
   return (
     <img
       onClick={onClick}
@@ -37,7 +37,9 @@ const Icon = ({ icon, sizeBox, onClick, position, zIndex }) => {
         height: sizeBox,
         cursor: 'pointer',
         position: position,
-        zIndex: zIndex
+        zIndex: zIndex,
+        padding: padding,
+        borderRadius: borderRadius
       }}
       src={icons[icon]}
       alt={`icon-${icon}`} />

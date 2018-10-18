@@ -9,6 +9,6 @@ export function isEmail(value) {
 }
 
 export function isNumber(value) {
-  const reg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
+  const reg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s/0-9]*$/g
   return reg.test(value) ? undefined : 'This should be a number'
 }

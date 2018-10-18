@@ -15,7 +15,8 @@ export default class ContactsContainer extends Container {
   state = {
     contacts: loadData('contacts') || persons,
     searchValue: '',
-    isOpen: false
+    isOpen: false,
+    deleteID: ''
   }
 
   saveContacts = () => saveData('contacts', this.state.contacts)
@@ -70,9 +71,9 @@ export default class ContactsContainer extends Container {
     contacts.splice(removeIndex, 1)
     this.saveContacts()
   }
-  openModal = () => {
+  openModal = (_id) => {
     document.querySelector('body').style.overflow = 'hidden'
-    this.setState({ isOpen: true })
+    this.setState({ isOpen: true, deleteID: _id })
   }
   closeModal = () => {
     this.setState({ isOpen: false })
@@ -80,7 +81,7 @@ export default class ContactsContainer extends Container {
   }
 
   removeImage = (contact) => {
-    this.setState({ contact: [contact, ...contact.imageUrl = ''] })
+    this.setState({ contact: [contact, ...contact.imageUrl = ""] })
   }
 }
 
