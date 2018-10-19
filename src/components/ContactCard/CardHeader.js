@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import { Subscribe } from 'unstated'
 import Icon from '../Icon'
 import ContactsContainer from '../../unstated/ContactsContainer';
+import PropTypes from 'prop-types'
 
-export default ({ id, isFavourite }) => (
+
+const CardHeader = ({ id, isFavourite }) => (
   <div className='contact-card__header'>
     <i className='contact-card__icon'>
       <Subscribe to={[ContactsContainer]}>
@@ -33,3 +35,10 @@ export default ({ id, isFavourite }) => (
     </div>
   </div>
 )
+
+CardHeader.propTypes = {
+  id: PropTypes.number,
+  isFavourite: PropTypes.bool,
+}
+
+export default CardHeader;

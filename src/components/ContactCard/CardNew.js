@@ -1,6 +1,8 @@
 import React from 'react'
 import Icon from '../Icon'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+
 
 const CardNew = ({ contacts, newID }) => {
 
@@ -11,5 +13,8 @@ const CardNew = ({ contacts, newID }) => {
     </Link>
   )
 }
-
+CardNew.propTypes = {
+  contacts: PropTypes.array,
+  newID: PropTypes.func,
+}
 export default CardNew;

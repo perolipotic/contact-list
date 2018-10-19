@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Icon from '../Icon';
 import { withRouter } from 'react-router';
 import { Subscribe } from 'unstated';
+import PropTypes from 'prop-types'
+
 import ContactsContainer from '../../unstated/ContactsContainer';
 
 const ContactHeader = ({
@@ -10,7 +12,7 @@ const ContactHeader = ({
   edit,
   view,
   current: { id, isFavourite, fullName },
-  deleteContact, history }) => {
+}) => {
   return (
     <div className="contact-info__header__wrapper">
       <div className="contact-info__header">
@@ -55,6 +57,12 @@ const ContactHeader = ({
       </div>
     </div>
   )
+}
+ContactHeader.propTypes = {
+  current: PropTypes.object,
+  showName: PropTypes.bool,
+  edit: PropTypes.bool,
+  view: PropTypes.bool,
 }
 
 export default withRouter(ContactHeader)

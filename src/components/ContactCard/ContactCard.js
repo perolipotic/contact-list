@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import CardHeader from './CardHeader';
 import CardImage from './CardImage';
 import CardTitle from './CardTitle';
+import PropTypes from 'prop-types'
+
 
 const ContactCard = ({ contact: { imageUrl, fullName, id, isFavourite } }) => {
   return (
@@ -17,6 +19,9 @@ const ContactCard = ({ contact: { imageUrl, fullName, id, isFavourite } }) => {
       </Link>
     </div>
   )
+}
+ContactCard.propTypes = {
+  contact: PropTypes.object,
 }
 
 export default ContactCard

@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 const ContactImage = ({ current: { fullName, imageUrl }, showForm }) => {
   return (
     <React.Fragment>
@@ -13,5 +15,10 @@ const ContactImage = ({ current: { fullName, imageUrl }, showForm }) => {
       </div>}
     </React.Fragment>
   )
+}
+
+ContactImage.propTypes = {
+  current: PropTypes.object,
+  showForm: PropTypes.bool,
 }
 export default ContactImage

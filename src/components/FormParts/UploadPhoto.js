@@ -4,6 +4,8 @@ import FileInput from "./FileInput"
 import Icon from "../Icon"
 import { Subscribe } from "unstated";
 import ContactsContainer from "../../unstated/ContactsContainer";
+import PropTypes from 'prop-types'
+
 
 class UploadPhoto extends React.Component {
   render() {
@@ -37,5 +39,8 @@ class UploadPhoto extends React.Component {
   }
 
 };
+UploadPhoto.propTypes = {
+  current: PropTypes.object,
+}
 
 export default UploadPhoto;

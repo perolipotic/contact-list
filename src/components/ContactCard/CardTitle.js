@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 
 const CardTitle = ({ fullName }) => {
   return (
@@ -6,6 +8,9 @@ const CardTitle = ({ fullName }) => {
       {fullName}
     </p>
   )
+}
+CardTitle.propTypes = {
+  fullName: PropTypes.string,
 }
 
 export default CardTitle

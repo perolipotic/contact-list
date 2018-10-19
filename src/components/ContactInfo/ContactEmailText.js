@@ -1,5 +1,7 @@
 import React from 'react'
 import Icon from '../Icon';
+import PropTypes from 'prop-types'
+
 
 const ContactEmailText = ({ email }) => {
   return (
@@ -11,6 +13,10 @@ const ContactEmailText = ({ email }) => {
       <p className="contact-email__label">{email}</p>
     </div>
   )
+}
+
+ContactEmailText.propTypes = {
+  email: PropTypes.string,
 }
 //label detals
 export default ContactEmailText;

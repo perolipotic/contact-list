@@ -1,5 +1,7 @@
 import React from 'react';
 import Icon from './Icon';
+import PropTypes from 'prop-types'
+
 
 const SearchBar = ({ onTextChange }) => {
   return (
@@ -10,6 +12,10 @@ const SearchBar = ({ onTextChange }) => {
       <input onChange={onTextChange} className='search__input' type="text" />
     </div>
   )
+}
+
+SearchBar.propTypes = {
+  onTextChange: PropTypes.func,
 }
 
 export default SearchBar;

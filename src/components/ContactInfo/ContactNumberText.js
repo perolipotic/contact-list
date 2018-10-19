@@ -1,10 +1,11 @@
 import React from 'react'
 import Icon from '../Icon';
+import PropTypes from 'prop-types'
 
 
 
 
-const ContactNumberText = ({ label, number, phoneNumbers }) => {
+const ContactNumberText = ({ phoneNumbers }) => {
   return (
     <div className="contact-number">
       <div className="contact-number__icon">
@@ -24,5 +25,7 @@ const ContactNumberText = ({ label, number, phoneNumbers }) => {
     </div>
   )
 }
-
+ContactNumberText.propTypes = {
+  phoneNumbers: PropTypes.array,
+}
 export default ContactNumberText;

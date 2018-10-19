@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 
 const pickStyle = (imageUrl) => {
   if (imageUrl === undefined) {
@@ -17,6 +19,9 @@ const CardImage = ({ imageUrl }) => {
 
       }} />
   )
+}
+CardImage.propTypes = {
+  imageUrl: PropTypes.string,
 }
 
 export default CardImage

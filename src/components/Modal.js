@@ -2,6 +2,8 @@ import React from 'react'
 import { Subscribe } from 'unstated';
 import ContactsContainer from '../unstated/ContactsContainer';
 import Button from './Buttons'
+import PropTypes from 'prop-types'
+
 
 
 const Modal = ({ isOpen }) => {
@@ -32,5 +34,8 @@ const Modal = ({ isOpen }) => {
 
     </Subscribe>
   )
+}
+Modal.propTypes = {
+  isOpen: PropTypes.bool,
 }
 export default Modal

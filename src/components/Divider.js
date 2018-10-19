@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 
 const Divider = ({ green }) => {
   return (
@@ -8,5 +10,7 @@ const Divider = ({ green }) => {
       }></div>
   )
 }
-
+Divider.propTypes = {
+  green: PropTypes.bool,
+}
 export default Divider

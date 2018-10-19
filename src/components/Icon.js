@@ -11,6 +11,8 @@ import phone from '../assets/images/icons/phone.svg';
 import user from '../assets/images/icons/user.svg';
 import upload from '../assets/images/icons/upload.svg';
 import clear from '../assets/images/icons/clear.svg';
+import PropTypes from 'prop-types'
+
 
 const icons = {
   search,
@@ -44,5 +46,15 @@ const Icon = ({ icon, sizeBox, onClick, position, zIndex, padding, borderRadius 
       src={icons[icon]}
       alt={`icon-${icon}`} />
   )
+}
+
+Icon.propTypes = {
+  icon: PropTypes.string,
+  sizeBox: PropTypes.string,
+  position: PropTypes.string,
+  zIndex: PropTypes.string,
+  padding: PropTypes.string,
+  borderRadius: PropTypes.string,
+  onClick: PropTypes.func,
 }
 export default Icon
